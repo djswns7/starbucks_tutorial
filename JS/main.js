@@ -38,13 +38,11 @@ function makeSnowflakes(n){
 
 
 
-window.onload = function () {
-  var mainBrandIcon = document.getElementById('rounded-brand-icon');
-  mainBrandIcon.addEventListener('click', function () {
-    makeSnowflakes(300+Math.random()*200);
+// window.onload = function () {
+//   var mainBrandIcon = document.getElementById('rounded-brand-icon');
+//   mainBrandIcon.addEventListener('click', function () {
+//     makeSnowflakes(300+Math.random()*200);
     
-  })
-  // makeSnowflakes(300);
-}
-
-
+//   })
+//   // makeSnowflakes(300);
+// }

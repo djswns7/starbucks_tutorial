@@ -11,6 +11,9 @@
 
 html {
   font-size: 16px;
+  
+  /* font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif; */
+  font-family: SoDoSans;
 }
 
 /* 숨김 컨텐츠 */
@@ -23,19 +26,50 @@ html {
 }
 
 body{
-  background-color: Moccasin;
+  background-color: #FFFFFF;
+  /* font-size: 1rem; */
   /* overflow: hidden; */
 }
 
 h1{
-  background-color: Teal;
+  /* width: fit-content; */
+
 }
 
+a{
+  text-decoration: none;
+  color: #1B1E1D;
+}
+
+
 header{
-  height: 5.2rem;
-  width: 100vw;
-  padding: 8px calc((100vw - 1440px)/2);
-  background-color: SlateGray;
+  height: 100px;
+  width: clamp(768px,96vw,1440px);
+  margin: 0 auto;
+  /* margin: 0 calc(50vw - 720px) 0 calc(50vw - 720px); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-wrapper{
+  position: relative;
+  margin: auto 0;
+}
+
+h1.logo{
+  position: absolute;
+  top: 25px;
+  left: -90px;
+  width: 51px;
+  height: 51px;
+}
+#rounded-brand-icon{
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.member{
+  display: block;
 }
 
 .mainTitleWrapper{
@@ -43,46 +77,170 @@ header{
   
   width: 100vw;
   padding: 0 calc((100vw - 1440px)/2) 0 calc((100vw - 1440px)/2);
-  height: 2.65rem;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mainTitle{
+  display: inline-block;
+  line-height: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+
 }
 
 .rewards{
+  background: url("../img/mainStar.png") no-repeat center/cover;
   background-color: #D4E9E2;
-
   width: 100vw;
   padding: 0 calc((100vw - 1440px)/2);
-  height: 37.5rem;
+  height: 810px;
   overflow: hidden;
 }
 
-.rewardsVisual{
-  z-index: 1;
-  background: url("../img/mainStar.png") no-repeat;
-  height: 100%;
-  width: 100%;
-}
 
 .navigator{
   display: block;
 }
 
 .menu{
-  
+  width: 280px;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  
 }
 
+.menuItem a{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  line-height: 101px;
+  display: block;
+}
+.menuItem:hover a{
+  color: #00754a;
+}
 
+.menuItem:nth-child(2) a{
+  
+  box-shadow: #00754a 0px -6px 0px 0px inset;
+}
 
+ul.member{
+  display: flex;
+  width: 346px;
+  height: 33px;
+  font-size: 14px;
+  margin: auto 0;
+  line-height: 33px;
+  justify-content: space-between;
+}
+ul.member li{
+  font-weight: 600;
+  margin: auto 0;
+  text-align: center;
+}
 
+.findStore::before{
+  content: ;
+  
+  /*<i class="fa-solid fa-location-dot"></i>*/
+  width: 32px;
+  height: 32px;
+}
 
+.findStore{
+  display: inline-block;
+  width: 117px;
+  margin-right: 24px;
+  font-size: 14px;
+}
 
+.findStore:hover{
+  color: #00754a;
+}
 
+.signIn{
+  display: inline-block;
+  border-radius: 50px;
+  border: #000000 solid 1px;
+  width: 80px;
+}
 
+.signIn:hover{
+  background-color: #EFEFEF;
+}
 
+.join{
+  display: inline-block;
+  border-radius: 50px;
+  border: #000000 solid 1px;
+  width: 93px;
+  background-color: #000000;
+  color: #ffffff;
+}
 
+.join:hover{
+  background-color: #4C4C4C;
+}
 
+.rewardsContents{
+  width: 691px;
+  height: 313px;
+  position: relative;
+  margin-top: 250px;
+}
 
+.rewardsContentTitle{
+  display:inline-block;
+  position: relative;
+  top: 12%;
+  font-size: 36px;
+  font-weight: 600;
+}
 
+.rewardsContentSub{
+  display:inline-block;
+  top: 18%;
+  font-size: 19px;
+  position: relative;
+}
+
+.rewards-content1{
+  width: 691px;
+  
+}
+
+.greenRound{
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #00754a;
+  color: #ffffff;
+  width: 102px;
+  height: 35px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 35px;
+  margin-top: 32px;
+}
+
+.rewards-content2{
+  width: 691px;
+  height: 20px;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+.joinNow{
+  text-decoration-line: underline;
+}
 
 
 
@@ -106,7 +264,7 @@ header{
   height: 20px;
   border-radius: 4px;
   /* background-color: white; */
-  background-image: url('../imgs/snowflake.png');
+  background-image: url('../img/snowflake.png');
   background-size: cover;
   position: absolute;
   top: -20px;
@@ -118,7 +276,7 @@ header{
   height: 20px;
   /* border-radius: 4px; */
   /* color: azure; */
-  background-image: url('../imgs/snowflake.png');
+  background-image: url('../img/snowflake.png');
   background-size: cover;
   position: absolute;
   top: 50vh;
