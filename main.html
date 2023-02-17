@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
@@ -8,44 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks</title>
+
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://kit.fontawesome.com/cb059f1086.js" crossorigin="anonymous"></script>
+    <script type="module" src="./JS/main.js"></script>
   </head>
   <body>
     <header>
-      <h1 class="logo">
-        <a href="#"><img src="" alt="" />스타벅스(logo)</a>
-      </h1>
+      <div class="nav-wrapper">
+        <h1 class="logo">
+          <a href="#"><img src="/img/rounded-brand-icon.svg" alt="스타벅스" id="rounded-brand-icon" /></a>
+        </h1>
 
-      <nav class="navigator">
-        <h2 class="a11y-hidden">메인 메뉴</h2>
-        <ul class="menu">
-          <li class="menuItem"><a href="#">MENU</a></li>
-          <li class="menuItem"><a href="#">REWARDS</a></li>
-          <li class="menuItem"><a href="#">GIFT CARDS</a></li>
-        </ul>
-      </nav>
+        <nav class="navigator">
+          <h2 class="a11y-hidden">메인 메뉴</h2>
+          <ul class="menu">
+            <li class="menuItem"><a href="#">MENU</a></li>
+            <li class="menuItem"><a href="#">REWARDS</a></li>
+            <li class="menuItem"><a href="#">GIFT CARDS</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <ul class="member">
         <li><a href="#" class="findStore"> Find a Store</a></li>
-        <li><a href="#" class="singIn"> Sign in</a></li>
+        <li><a href="#" class="signIn"> Sign in</a></li>
         <li><a href="#" class="join">Join now</a></li>
       </ul>
     </header>
 
     <main>
-      <h2 class="mainTitle">STARBUCKS REWARDS</h2>
+      <div class="mainTitleWrapper">
+        <h2 class="mainTitle">Starbucks® Rewards</h2>
+      </div>
       <section class="rewards">
         <div class="rewardsContents">
-          <h3 class="rewardsContentTitle">FREE COFFEE IS A TAP AWAY</h3>
+          <h3 class="rewardsContentTitle">FREE COFFEE<br />IS A TAP AWAY</h3>
           <div class="rewardsContentSub">
-            Join now to start earning Rewards.
-            <a href="#" class="joinNow greenRound">Join now</a>
-            Or
-            <a href="#" class="joinNow">join in the app</a>
-            for the best experience
+            <div class="rewards-content1">Join now to start earning Rewards.</div>
+            <a href="#" class="greenRound">Join now</a>
+            <div class="rewards-content2">
+              Or
+              <a href="#" class="joinNow">join in the app</a>
+              for the best experience
+            </div>
           </div>
         </div>
-        <div class="rewardsVisual">(배경 starbucks_visual 설정)</div>
       </section>
+
+      <!-- start -->
 
       <section class="start">
         <h3 class="startTitle">Getting started is easy</h3>
@@ -53,35 +63,32 @@
         <ol class="start">
           <li>
             <article class="startWay">
-              <h4 class="startWayTitle">Create an account</h4>
-              <div class="startWayBrief">
-                To get started, <a href="#">join now.</a> You can also
-                <a href="#">join in the app</a> to get access to the full range
-                of Starbucks Rewards benefits.
+              <div class="starWay-textWrapper">
+                <h4 class="startWayTitle">Create an account</h4>
+                <div class="startWayBrief">To get started, <a href="#">join now.</a> You can also <a href="#">join in the app</a> to get access to the full range of Starbucks Rewards benefits.</div>
               </div>
-              <img src="" alt="1" class="startWayImg" />
+              <img src="./img/started1.jpg" alt="1" class="startWayImg" />
             </article>
           </li>
           <li>
             <article class="startWay">
-              <h4 class="startWayTitle">Order and pay how you’d like</h4>
-              <div class="startWayBrief">
-                Use cash, credit/debit card or save some time and pay right
-                through the app. You’ll collect Stars all ways.
-                <a href="#">Learn how</a>
+              <div class="starWay-textWrapper">
+                <h4 class="startWayTitle">Order and pay how you’d like</h4>
+                <div class="startWayBrief">
+                  Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways.
+                  <a href="#">Learn how</a>
+                </div>
               </div>
-              <img src="" alt="2" class="startWayImg" />
+              <img src="./img/started2.jpg" alt="2" class="startWayImg" />
             </article>
           </li>
           <li>
             <article class="startWay">
-              <h4 class="startWayTitle">Earn Stars, get Rewards</h4>
-              <div class="startWayBrief">
-                As you earn Stars, you can redeem them for Rewards—like free
-                food, drinks, and more. Start redeeming with as little as 25
-                Stars!
+              <div class="startWay-textWrapper">
+                <h4 class="startWayTitle">Earn Stars, get Rewards</h4>
+                <div class="startWayBrief">As you earn Stars, you can redeem them for Rewards—like free food, drinks, and more. Start redeeming with as little as 25 Stars!</div>
               </div>
-              <img src="" alt="3" class="startWayImg" />
+              <img src="./img/started3.jpg" alt="3" class="startWayImg" />
             </article>
           </li>
         </ol>
@@ -99,54 +106,38 @@
           </div>
           <div class="tabPannel">
             <h4 class="tabPannelTitle">Customize your drink</h4>
-            <p class="tabPannelBreif">
-              Make your drink just right with an extra espresso shot, dairy
-              substitute or a dash of your favorite syrup.
-            </p>
-            <img src="" alt="" />
+            <p class="tabPannelBreif">Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup.</p>
+            <img src="./img/tab-025.png" alt="25 star image" />
           </div>
         </div>
       </section>
 
       <section class="benefit">
         <h3 class="benefitTitle">Endless Extras</h3>
-        <p class="benefitSub">
-          Joining Starbucks® Rewards means unlocking access to exclusive
-          benefits. Say hello to easy ordering, tasty Rewards and—yes, free
-          coffee.
-        </p>
+        <p class="benefitSub">Joining Starbucks® Rewards means unlocking access to exclusive benefits. Say hello to easy ordering, tasty Rewards and—yes, free coffee.</p>
         <ul class="benefitList">
           <li>
             <article class="benefitItem">
               <h4 class="benefitItemTitle">Fun freebies</h4>
-              <p class="benefitItemBrief">
-                Not only can you earn free coffee, look forward to a birthday
-                treat plus coffee and tea refills.
-              </p>
+              <p class="benefitItemBrief">Not only can you earn free coffee, look forward to a birthday treat plus coffee and tea refills.</p>
               <a href="" class="learnMore">Learn more</a>
-              <img src="" alt="" class="benefitImg" />
+              <img src="./img/benefit-fun.jpg" alt="" class="benefitImg" />
             </article>
           </li>
           <li>
             <article class="benefitItem">
               <h4 class="benefitItemTitle">Order & pay ahead</h4>
-              <p class="benefitItemBrief">
-                Enjoy the convenience of in-store, curbside or drive-thru pickup
-                at select stores.
-              </p>
+              <p class="benefitItemBrief">Enjoy the convenience of in-store, curbside or drive-thru pickup at select stores.</p>
               <a href="" class="learnMore">Learn more</a>
-              <img src="" alt="" class="benefitImg" />
+              <img src="./img/benefit-ahead.jpg" alt="" class="benefitImg" />
             </article>
           </li>
           <li>
             <article class="benefitItem">
               <h4 class="benefitItemTitle">Get to free faster</h4>
-              <p class="benefitItemBrief">
-                Earn Stars even quicker with Bonus Star challenges, Double Star
-                Days and exciting games.
-              </p>
+              <p class="benefitItemBrief">Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting games.</p>
               <a href="" class="learnMore">Learn more</a>
-              <img src="" alt="" class="benefitImg" />
+              <img src="./img/benefit-faster.jpg" alt="" class="benefitImg" />
             </article>
           </li>
         </ul>
@@ -154,10 +145,7 @@
 
       <section class="earnStars">
         <h3 class="earnStartsTitle">Cash or card, you earn Stars</h3>
-        <p class="earnStarsSub">
-          No matter how you pay, you can earn Stars with your morning coffee.
-          Those Stars add up to (really delicious) Rewards.
-        </p>
+        <p class="earnStarsSub">No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to (really delicious) Rewards.</p>
 
         <ul class="earnStarsList">
           <li>
@@ -166,20 +154,13 @@
               <p class="earnStarsItemSub">Pay as you go</p>
               <article class="earnStarsWay">
                 <h5 class="earnStarsWayTitle">Scan and pay separately</h5>
-                <p class="earnStarsWayBrief">
-                  Scan and pay separately Use cash or credit/debit card at the
-                  register.
-                </p>
-                <img src="" alt="" class="earnStarsWay" />
+                <p class="earnStarsWayBrief">Scan and pay separately Use cash or credit/debit card at the register.</p>
+                <img src="./img/1A.png" alt="Scan and pay separately image" class="earnStarsWay" />
               </article>
               <article class="earnStarsWay">
                 <h5 class="earnStarsWayTitle">Save payment in the app</h5>
-                <p class="earnStarsWayBrief">
-                  Check-out faster by saving a credit/debit card or PayPal to
-                  your account. You’ll be able to order ahead or scan and pay at
-                  the register in one step.
-                </p>
-                <img src="" alt="" class="earnStarsWay" />
+                <p class="earnStarsWayBrief">Check-out faster by saving a credit/debit card or PayPal to your account. You’ll be able to order ahead or scan and pay at the register in one step.</p>
+                <img src="./img/1B.png" alt="Save payment in the app image" class="earnStarsWay" />
               </article>
             </section>
           </li>
@@ -189,39 +170,28 @@
               <p class="earnStarsItemSub">Add funds in the app</p>
               <article class="earnStarsWay">
                 <h5 class="earnStarsWayTitle">Preload</h5>
-                <p class="earnStarsWayBrief">
-                  To save time and earn Stars twice as fast, add money to your
-                  digital Starbucks Card using any payment option. Scan and pay
-                  in one step or order ahead in the app.
-                </p>
-                <img src="" alt="" class="earnStarsWay" />
+                <p class="earnStarsWayBrief">To save time and earn Stars twice as fast, add money to your digital Starbucks Card using any payment option. Scan and pay in one step or order ahead in the app.</p>
+                <img src="./img/2A.png" alt="Preload image" class="earnStarsWay" />
               </article>
               <article class="earnStarsWay">
                 <h5 class="earnStarsWayTitle">Register your gift card</h5>
-                <p class="earnStarsWayBrief">
-                  Then use it to pay through the app. You can even consolidate
-                  balances from multiple cards in one place.
-                </p>
-                <img src="" alt="" class="earnStarsWay" />
+                <p class="earnStarsWayBrief">Then use it to pay through the app. You can even consolidate balances from multiple cards in one place.</p>
+                <img src="./img/2B.png" alt="Register your gift card image" class="earnStarsWay" />
               </article>
             </section>
           </li>
           <li>
             <section class="earnStarsItem">
-              <h4 class="earnStarsItemTitle">
-                Up to 3<span>⭐</span> per dollars
-              </h4>
+              <h4 class="earnStarsItemTitle">Up to 3<span>⭐</span> per dollars</h4>
               <p class="earnStarsItemSub">With Starbucks Rewards Visual Card</p>
               <article class="earnStarsWay">
                 <h5 class="earnStarsWayTitle">Earn Stars even faster</h5>
                 <p class="earnStarsWayBrief">
                   Earn Stars on all purchases you make with our
-                  <a href="#">credit card</a> in and outside of Starbucks. Earn
-                  1 Star per $1 when you digitally preload your Starbucks Card
-                  with your Starbucks Rewards Visa Card, and earn 2 Stars per $1
-                  when you pay with that preloaded Starbucks Card
+                  <a href="#">credit card</a> in and outside of Starbucks. Earn 1 Star per $1 when you digitally preload your Starbucks Card with your Starbucks Rewards Visa Card, and earn 2 Stars per $1 when you pay with that preloaded Starbucks
+                  Card
                 </p>
-                <img src="" alt="" class="earnStarsWay" />
+                <img src="./img/2B.png" alt="Earn Stars even faster" class="earnStarsWay" />
               </article>
             </section>
           </li>
