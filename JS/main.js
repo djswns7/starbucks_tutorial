@@ -1,3 +1,5 @@
+import ThreeContentSection from "./threeContentSection.js";
+
 var body = document.querySelector("body");
 
 var MIN_DURATION = 5;
@@ -41,6 +43,14 @@ function makeSnowflakes(n) {
 //   })
 //   // makeSnowflakes(300);
 // }
+
+var domContainer = document.getElementById("mainContentsWrapper");
+var root = ReactDOM.createRoot(domContainer);
+root.render(React.createElement(
+  React.Fragment,
+  null,
+  React.createElement(ThreeContentSection, { sectionName: "start" })
+));
 
 /* -------------------------------------------------------------------------- */
 /*                 잘 적용되었는지 확인 할 수 있는 예제 코드                     */
