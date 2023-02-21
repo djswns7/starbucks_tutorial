@@ -1,4 +1,5 @@
-import { ThreeContentSection, GettingStartCards, BenfitCards } from "./threeContentSection.js"
+import { EarningStars } from "./EarningStars.js"
+import { ThreeContentSection, GettingStartCards, BenfitCards } from "./ThreeContentSection.js"
 import { UseStar } from "./UseStar.js"
 
 const gettingStartContents = [
@@ -42,6 +43,30 @@ const gettingStartLists = [<GettingStartCards contents={gettingStartContents[0]}
 
 const benfitLists = [<BenfitCards contents={benfitContents[0]} />, <BenfitCards contents={benfitContents[1]} />, <BenfitCards contents={benfitContents[2]} />]
 
+const EarningStarsListContentsArr = [
+  {
+    titleDollars: 1,
+    subTitle: "Pay as you go",
+    articleContentsArr: [
+      { title: "Scan and pay separately", brief: "Use cash or credit/debit card at the register.", imgFileName: "1A.png", imgAlt: "Scan and pay separately image" },
+      {
+        title: "Save payment in the app",
+        brief: "Check-out faster by saving a credit/debit card or PayPal to your account. You’ll be able to order ahead or scan and pay at the register in one step.",
+        imgFileName: "1B.png",
+        imgAlt: "Save payment in the app image",
+      },
+    ],
+  },
+  {
+    titleDollars: 2,
+    subTitle: "Add funds in the app",
+    articleContentsArr: [
+      { title: "Preload", brief: "To save time and earn Stars twice as fast, add money to your digital Starbucks Card using any payment option. Scan and pay in one step or order ahead in the app.", imgFileName: "2A.png", imgAlt: "Preload image" },
+      { title: "Register your gift card", brief: "Then use it to pay through the app. You can even consolidate balances from multiple cards in one place.", imgFileName: "2B.png", imgAlt: "Register your gift card image" },
+    ],
+  },
+]
+
 const domContainer = document.getElementById("mainContentsWrapper")
 const root = ReactDOM.createRoot(domContainer)
 root.render(
@@ -69,6 +94,10 @@ root.render(
       sectionName="benefit"
       lists={benfitLists}
     />
+    <br />
+    <br />
+    <br />
+    <EarningStars title="Cash or card, you earn Stars" subTitle="No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to (really delicious) Rewards." listsContents={EarningStarsListContentsArr}></EarningStars>
   </React.Fragment>
 )
 
